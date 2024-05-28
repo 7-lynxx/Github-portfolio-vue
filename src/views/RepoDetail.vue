@@ -40,6 +40,7 @@
             </QCardActions>
           </QCard>
         </QDialog>
+        <QBtn color="teal" class="mt-2" @click="goBack">Go Back</QBtn>
       </div>
     </div>
   </template>
@@ -70,6 +71,10 @@ import { QBtn, QCard, QCardActions, QCardSection, QDialog, QInput, QSpinner } fr
       const editRepo = ref({ name: '', description: '' })
       const route = useRoute()
       const router = useRouter()
+
+      const goBack = () => {
+        router.back();
+      }
   
       const fetchRepoDetails = async () => {
         loading.value = true
@@ -118,7 +123,8 @@ import { QBtn, QCard, QCardActions, QCardSection, QDialog, QInput, QSpinner } fr
         editRepo,
         showEditModal,
         updateRepo,
-        deleteRepo
+        deleteRepo,
+        goBack
       }
     }
   }

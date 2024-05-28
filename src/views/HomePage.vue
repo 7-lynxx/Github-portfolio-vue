@@ -32,6 +32,7 @@
         </QCardActions>
       </QCard>
     </QDialog>
+   
   </div>
 </template>
 
